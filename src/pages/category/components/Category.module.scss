@@ -1,0 +1,53 @@
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    transition: transform 0.2s;
+    border: solid 2px red;
+    display:flex ;
+
+    
+  
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+  }
+
+  .card-button{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-evenly;
+
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background-color: black;
+  }
+  
+  .edit-button {
+    color: #3498db; /* Azul para edição */
+  }
+  
+  .delete-button {
+    color: #e74c3c; /* Vermelho para deletar */
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
