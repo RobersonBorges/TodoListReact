@@ -1,5 +1,5 @@
 .card {
-    background: #fff;
+    background: #5382c9;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
@@ -8,12 +8,7 @@
     transition: transform 0.2s;
     border: solid 2px red;
     display:flex ;
-
-    
   
-    &:hover {
-      transform: scale(1.02);
-    }
   }
   
   .card-title {

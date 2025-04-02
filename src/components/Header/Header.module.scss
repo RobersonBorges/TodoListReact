@@ -1,0 +1,53 @@
+@import '../../styles/variables.css';
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--header-background);
+    color: var(--text-color);
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        img{
+            width:15%;
+        }
+        a{
+            text-decoration: none;
+            color: var(--link-color);
+            font-size: 1.5rem;
+        }
+           nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 500px;
+            ul{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 100%;
+               }
+           }
+        article{
+            margin-left: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            h1{
+                font-size: 3rem;
+                color: white;
+                margin-left: 10px;
+            }
+        }
+    }
+    .teste{
+        border: solid 2px green;
+        width: 50%;
+    }
+
+}
