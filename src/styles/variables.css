@@ -8,4 +8,16 @@
     --submit-button-active: #218838; /* Cor para o botão ao clicar */
     --input-background: #2C2C2C; /* Cor para o background do input text */
     --input-text-color: #E0E0E0; /* Cor para o texto do input */
+    --card-background: #5382C9; /* Cor para o fundo do card */
+    --card-title-color: #FFD700; /* Cor para o título do card */
+    --card-border-color: #3A5A99; /* Cor para bordas ou destaques */
+    --background-card: #2a2a2a;
+    --border-card: #3a3a3a;
+    --background-input: #2a2a2a;
+    --color-success: #66bb6a;
+    --color-success-hover: #81c784;
+    --color-danger: #ef5350;
+    --color-danger-hover: #e57373;
+    --color-edit: #42a5f5;
+    --color-edit-hover: #64b5f6;
 }

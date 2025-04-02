@@ -65,6 +65,7 @@ const CategoryCard = ({ category, setCategory }) => {
   
     return (
       <>
+        <Messages type={messageType} message={message} />
         {category.map((cat) => (
           <article className={styles.card} key={cat.codCategory}>
             {editMode === cat.codCategory ? (
@@ -77,30 +78,29 @@ const CategoryCard = ({ category, setCategory }) => {
             ) : (
               <p className={styles["card-title"]}>{cat.nameCategory}</p>
             )}
-  
-            <div className={styles["card-button"]}>
+
+            <div className={styles["card-box-button"]}>
               {editMode === cat.codCategory ? (
                 <>
                   <button onClick={() => updateCategory(cat.codCategory)}>
-                    <Check size={20} />
+                    <Check size={20} className={styles["icon-success"]} />
                   </button>
                   <button onClick={cancelEditing}>
-                    <X size={20} />
+                    <X size={20} className={styles["icon-cancel"]} />
                   </button>
                 </>
               ) : (
                 <button onClick={() => startEditing(cat)}>
-                  <Pencil size={20} />
+                  <Pencil size={20} className={styles["icon-edit"]} />
                 </button>
               )}
-  
+
               <button onClick={() => deleteCategory(cat.codCategory)}>
-                <Trash2 size={20} />
+                <Trash2 size={20} className={styles["icon-delete"]} />
               </button>
             </div>
           </article>
         ))}
-        <Messages type={messageType} message={message} />
       </>
     );
   };

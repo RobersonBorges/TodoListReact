@@ -1,48 +1,80 @@
+@import '../../../styles/variables.css';
 .card {
-    background: #5382c9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin: 10px 0;
-    text-align: center;
-    transition: transform 0.2s;
-    border: solid 2px red;
-    display:flex ;
-  
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #000;
-  }
+  background: var(--background-card); // Fundo mais escuro para o card
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: 60px;
+  border: 1px solid var(--border-card);
 
-  .card-button{
-    display: flex;
-    align-items: center;
-    width: 100px;
-    justify-content: space-evenly;
-
-  }
-
-  button {
-    background: transparent;
+  .edit-input {
+    margin-left: 5px;
+    margin-top: 15px;
+    height: 30px;
+    color: var(--text-color); // Texto do input mais claro
+    background-color: var(--border-card); // Input mais escuro
     border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    background-color: black;
+    border-radius: 5px;
   }
-  
-  .edit-button {
-    color: #3498db; /* Azul para edição */
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 17px;
+  margin-left: 5px;
+  color: var(--text-color); // Texto mais claro para melhor contraste
+}
+
+.card-box-button {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-evenly;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.icon-success {
+  color: var(--color-success); 
+  &:hover {
+    color: var(--color-success-hover);
   }
-  
-  .delete-button {
-    color: #e74c3c; /* Vermelho para deletar */
+}
+
+.icon-cancel {
+  color: var(--color-danger); 
+  &:hover {
+    color: var(--color-danger-hover);
   }
-  
-  button:hover {
-    transform: scale(1.1);
+}
+
+.icon-edit {
+  color: var(--color-edit); 
+  &:hover {
+    color: var(--color-edit-hover);
   }
-  
+}
+
+.icon-delete {
+  color: var(--color-danger); 
+  &:hover {
+    color: var(--color-danger-hover);
+  }
+}

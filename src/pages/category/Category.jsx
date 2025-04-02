@@ -61,7 +61,6 @@ export default function Category() {
   return (
     <main className={styles.main_category}>
       <h2> Category Registration </h2>
-
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -85,7 +84,9 @@ export default function Category() {
           {/* Exibe a mensagem */}
         </div>
       </form>
-      <CategoryCard category={category} setCategory={setCategory} />
+      <div className={styles.cardContainer}>
+        <CategoryCard category={category} setCategory={setCategory} />
+      </div>
     </main>
   );
 }
