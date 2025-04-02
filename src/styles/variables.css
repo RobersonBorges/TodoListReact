@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #4E9FFF;
+    --background-color: #121212;
+    --text-color: #E0E0E0;
+    --header-background: #1E1E2F;
+    --link-color: #4E9FFF;
+    --submit-button-background: #28A745; /* Cor para o botão submit */
+    --submit-button-active: #218838; /* Cor para o botão ao clicar */
+    --input-background: #2C2C2C; /* Cor para o background do input text */
+    --input-text-color: #E0E0E0; /* Cor para o texto do input */
+}

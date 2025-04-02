@@ -1,8 +1,8 @@
 import axios from "axios";
-import styles from "./Category.module.scss";
+import styles from "./CategoryCard.module.scss";
 import { Pencil, Trash2, Check, X } from "lucide-react";
 import { useState } from "react";
-import Messages from "../../../components/Messages";
+import Messages from "../../../components/Messages/Messages";
 
 const CategoryCard = ({ category, setCategory }) => {
     const [editMode, setEditMode] = useState(null);

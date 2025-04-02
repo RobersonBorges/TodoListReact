@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Messages from "../../components/Messages";
+import Messages from "../../components/Messages/Messages";
 import CategoryCard from "./components/CategoryCard";
+import styles from "./Category.module.scss";
 
 export default function Category() {
   const apiURL = "http://localhost:8080/categories";
@@ -14,7 +15,7 @@ export default function Category() {
   const showTemporaryMessage = (msg, type) => {
     setMessage(msg);
     setMessageType(type);
-    
+
     setTimeout(() => {
       setMessage("");
       setMessageType("");
@@ -24,7 +25,7 @@ export default function Category() {
   const getCategories = async () => {
     const dataCategory = await axios.get(apiURL);
     setCategory(dataCategory.data);
-  }
+  };
 
   useEffect(() => {
     getCategories();
@@ -41,7 +42,7 @@ export default function Category() {
   const createCategory = async () => {
     try {
       const dataSend = {
-        nameCategory
+        nameCategory,
       };
 
       await axios.post(apiURL, dataSend);
@@ -58,22 +59,33 @@ export default function Category() {
   };
 
   return (
-    <main>
+    <main className={styles.main_category}>
+      <h2> Category Registration </h2>
+
       <form
         onSubmit={(e) => {
           e.preventDefault();
         }}
       >
-        <input
-          type="text"
-          placeholder="category description"
-          value={nameCategory}
-          onChange={captureNameCategory}
-        />
-        <input type="submit" value="submit" onClick={createCategory} />
-        <Messages type={messageType} message={message} /> {/* Exibe a mensagem */}
+        <div className={styles.inputsContainer}>
+          <input
+            className={styles.inputText}
+            type="text"
+            placeholder="category description"
+            value={nameCategory}
+            onChange={captureNameCategory}
+          />
+          <input
+            type="submit"
+            value="submit"
+            onClick={createCategory}
+            className={styles.submit}
+          />
+          <Messages type={messageType} message={message} />{" "}
+          {/* Exibe a mensagem */}
+        </div>
       </form>
-      <CategoryCard category={category} setCategory={setCategory}/>
+      <CategoryCard category={category} setCategory={setCategory} />
     </main>
   );
 }
